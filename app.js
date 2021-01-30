@@ -38,9 +38,9 @@ function increaseSpinner(itemPlus) {
 }
 // Decrease Spinner
 function decreaseSpinner(itemMinus) {
-    let monir = Number(itemMinus.value);
+    let decValue = Number(itemMinus.value);
 
-    if (!monir || monir < 0) {
+    if (!decValue || decValue < 0) {
         itemMinus.classList.add('error');
     } else {
         itemMinus.value--;
