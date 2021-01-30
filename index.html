@@ -34,11 +34,11 @@
             <div class="inputs">
                 <div class="input-group">
                     <label for="">Flying From</label>
-                    <input class="flying-from inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                    <input class="flying-from inp-style w-100" type="text" name="" placeholder="Dhake, Bangladesh">
                 </div>
                 <div class="input-group">
                     <label for="">Flying To</label>
-                    <input class="flying-to inp-style" type="text" name="" placeholder="New York, United States">
+                    <input class="flying-to inp-style w-100" type="text" placeholder="New York, United States">
                 </div>
             </div>
             <div class="inputs">
@@ -57,7 +57,7 @@
                     <label for="">First Class ($150)</label>
                     <div class="f-class w-100">
                         <button class="btn first-class-minus">-</button>
-                        <input class="first-class-ticket-amount inp-style w-100 mx-10" type="number" name="">
+                        <input class="first-class-ticket-amount inp-style w-100 mx-10" type="number" name="" min="0" max="100">
                         <button class="btn first-class-plus">+</button>
                     </div>
                     
@@ -69,12 +69,13 @@
                     <label for="">Economy ($100)</label>
                     <div class="f-class">
                         <button class="btn economy-minus">-</button>
-                        <input class="economy-ticket-amount inp-style  w-100 mx-10" type="number" name="">
+                        <input class="economy-ticket-amount inp-style  w-100 mx-10" type="number" name="" min="0" max="100">
                         <button class="btn economy-plus">+</button>
                     </div>
                 </div>
                
             </div>
+            
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -109,7 +110,7 @@
         <div class="booking-details">
             <header>
                 <h3>😍😍 Successfully Booked Your Flight</h3>
-                <p>Your Flight Details</p>
+                <p>Your Flight Detils</p>
             </header>
             
             <table class="table table-bordered">
