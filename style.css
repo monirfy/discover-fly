@@ -56,7 +56,6 @@ a.active {
     .main-content {
         grid-template-columns: 1fr;
         gap: 30px;
-        text-align: center;
     }
     nav ul {
         justify-content: center;
@@ -108,6 +107,15 @@ a.active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+}
+
+@media (max-width: 768px) {
+    label {
+        display: block;
+    }
+    .booking-form .inputs {
+        grid-template-columns: 1fr;
+    }
 }
 .booking-content {
     color: #fff;
