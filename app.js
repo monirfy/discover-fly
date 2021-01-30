@@ -62,12 +62,6 @@ function grandTotal() {
 }
 
 document.querySelector('.book-now').addEventListener('click', function () {
-    document.querySelector('.booking-form').style.display = 'none';
-    document.querySelector('.booking-details').style.display = 'block';
-
-    grandTotal();
-    //increaseSpinner();
-
     const fryingFrom = document.querySelector('.flying-from').value;
     const fryingTo = document.querySelector('.flying-to').value;
     const fryingDeparture = document.querySelector('.flying-departure').value;
@@ -75,10 +69,21 @@ document.querySelector('.book-now').addEventListener('click', function () {
     const firstClassTicket = document.querySelector('.first-class-ticket-amount').value;
     const economyTicket = document.querySelector('.economy-ticket-amount').value;
 
-    document.querySelector('.user-flying-from').textContent = fryingFrom;
-    document.querySelector('.user-flying-to').textContent = fryingTo;
-    document.querySelector('.user-departure-date').textContent = fryingDeparture;
-    document.querySelector('.user-return-date').textContent = fryingReturn;
-    document.querySelector('.user-first-class').textContent = firstClassTicket;
-    document.querySelector('.user-economy-class').textContent = economyTicket;
+    if (!fryingFrom || !fryingTo || !fryingDeparture || !fryingReturn || !firstClassTicket || !economyTicket) {
+        document.querySelector('.warning').textContent = '⚠ Please fill all filds 😣';
+        //alert('Please fill all filds 😣');
+    } else {
+        document.querySelector('.booking-form').style.display = 'none';
+        document.querySelector('.booking-details').style.display = 'block';
+
+        grandTotal();
+        //increaseSpinner();
+
+        document.querySelector('.user-flying-from').textContent = fryingFrom;
+        document.querySelector('.user-flying-to').textContent = fryingTo;
+        document.querySelector('.user-departure-date').textContent = fryingDeparture;
+        document.querySelector('.user-return-date').textContent = fryingReturn;
+        document.querySelector('.user-first-class').textContent = firstClassTicket;
+        document.querySelector('.user-economy-class').textContent = economyTicket;
+    }
 });
