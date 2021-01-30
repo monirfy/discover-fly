@@ -212,3 +212,6 @@ table {
     color: red;
     text-align: center;
 }
+.error{
+    border: 2px solid red;
+}
