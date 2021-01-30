@@ -20,10 +20,17 @@ nav {
     padding: 20px 0;
 }
 .container {
-    width: 1200px;
-    max-width: 85%;
-    margin: 0 auto;
+    padding: 30px !important;
 }
+@media (min-width: 768px) {
+    .container {
+        width: 1200px;
+        max-width: 85%;
+        margin: 0 auto;
+        padding: 0 !important;
+    }
+}
+
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -44,6 +51,16 @@ a.active {
     grid-template-columns: 2fr 3fr;
     gap: 70px;
     align-items: center;
+}
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    nav ul {
+        justify-content: center;
+    }
 }
 .booking-form,
 .booking-details {
@@ -95,6 +112,11 @@ a.active {
 .booking-content {
     color: #fff;
     width: 80%;
+}
+@media (max-width: 768px) {
+    .booking-content {
+        width: 100%;
+    }
 }
 .booking-content h1 {
     font-size: 70px;
